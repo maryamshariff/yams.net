@@ -3,8 +3,10 @@
 	 <head>
 		 <meta charset="utf-8"> 
      <title>Maryam's Home Page</title>
-    <style>
-     
+ <div class="terminal"></div>
+      </head>
+  
+     <style>
       body{
         background-color: hsl(40, 40%, 89%);
         background-image:  
@@ -21,7 +23,29 @@
      		font-size:100px;
        text-align:center;
       }
-     
+     body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes sprite {
+  to { background-position: -8640px }
+}
+
+.terminal {
+  height: 1024px;
+  width: 1440px;
+  background: url("https://i.imgur.com/zLh2Pgs.png");
+  animation: sprite 1.5s steps(6) infinite;
+  transform: translate(-25%, -25%) scale(0.5);
+}
+
+@media only screen and (min-width: 1024px) {
+  .terminal {
+    transform: scale(1);
+  }
+}
      
      </style>
        <body> 
@@ -29,5 +53,5 @@
        	<h1> Maryam </h1>
            
      		</body>
- 	 </head> 
+ 	
 </html>
