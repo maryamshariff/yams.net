@@ -18,6 +18,29 @@
       }       
       
        h1{
+       .conveyor-belt {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+}
+
+.text {
+  display: inline-block;
+  padding-right: 100%; /* This value determines the speed of the conveyor belt animation */
+  animation: conveyor 8s linear infinite; /* Adjust the duration for the desired speed */
+}
+
+@keyframes conveyor {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+         
          color: black;
          background-color: white;
          display: inline; 
